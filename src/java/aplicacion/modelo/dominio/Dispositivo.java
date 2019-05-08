@@ -49,25 +49,13 @@ public class Dispositivo implements Serializable{
         }
       return numeros ;   
     }
-    
-    
-    public int obtenerFactorial(int numero){
-        int i, resultado=1;
-        for (i=1;i<numero+1;i++) {
-            resultado=resultado*i;
-        }
-        return resultado;
-    }
-    
-    public double calcularCoseno (int numero){
-        int i=0;
-        double resultado=0;
-        while (i<=numero) {  
-            resultado=resultado+Math.pow(-1, i)*(Math.pow(numero, 2*i)/obtenerFactorial(i));
-          i++;  
-        }
-    return resultado;          
-    }
    
+    
+    public double calcularCoseno(double numero){
+        double c = numero * Math.PI/180.0;
+        double coseno = Math.cos(c);
+        
+        return coseno;
+    }
     
 }

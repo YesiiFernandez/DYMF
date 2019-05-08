@@ -82,11 +82,11 @@ public class DispositivoFormBean implements Serializable {
     }
 
     public void cargarResulatdo() {
-        System.out.println("asdf");
+   //     System.out.println("asdf");
         this.getDispositivo().calcularCoseno(this.valorCoseno);
         this.setResultadoCoseno(this.dispositivo.calcularCoseno(valorCoseno));
-        System.out.println(this.valorCoseno);
-        System.out.println("qwerty");
+  //      System.out.println(this.valorCoseno);
+  //    System.out.println("qwerty");
     }
 
     public ArrayList<Integer> getTabla() {
