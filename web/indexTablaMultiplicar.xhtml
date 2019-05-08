@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+     <h:body>
+        <h1> Tabla de Multiplicar </h1>
+        <p:panel id="pnlDispositivo" header="Formulario">
+            <h:form id="frmTablaDeMultiplicar">
+                <p:outputLabel value="Ingrese Numero: "/>
+                <p:inputNumber id="Numero" value="#{dispositivoFormBean.valorParaCalcularLaTabla}"/>
+                <p:commandButton id="btnTablaMultiplicar" value="Calcular"
+                                 actionListener="#{dispositivoFormBean.cargarTabla()}"
+                                 update="tblDispositivo"/>
+                <p:dataTable id="tblDispositivo" var="e" value="#{dispositivoFormBean.tabla}">
+                <p:column >
+                    <f:facet name="header">Tabla de Multiplicar</f:facet>
+                    <p:outputLabel value="#{e}"/>
+                </p:column>
+                </p:dataTable>
+            </h:form>
+        </p:panel> 
+
+                 
+    </h:body>
+</html>
+
