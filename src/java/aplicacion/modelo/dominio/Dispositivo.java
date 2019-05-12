@@ -14,7 +14,11 @@ import java.util.ArrayList;
  */
 public class Dispositivo implements Serializable{
    
-    
+    /**
+     * calcula la tabla de multiplicar de los primero s 100 numeros y devuelve una lista
+     * @param numeroA
+     * @return 
+     */
     public ArrayList tablaMultiplicar (int numeroA){
         ArrayList <Integer> resultado = new ArrayList();
         int i;
@@ -24,6 +28,12 @@ public class Dispositivo implements Serializable{
         }
         return resultado;
     }
+    
+    /**
+     * calcula los divisores de un numero y devuelve una lista 
+     * @param numeroA
+     * @return 
+     */
     
     public ArrayList divisor(int numeroA){
        ArrayList <Integer> divisores = new ArrayList();
@@ -36,6 +46,12 @@ public class Dispositivo implements Serializable{
        return divisores;
     }
     
+    /**
+     * calcula los numeros pares entre dos numeros ingresados y devuelve una lista
+     * @param numeroA
+     * @param numeroB
+     * @return 
+     */
     
     public ArrayList calcularNumerosPares (int numeroA, int numeroB){
         ArrayList <Integer> numeros = new ArrayList ();
@@ -50,7 +66,11 @@ public class Dispositivo implements Serializable{
       return numeros ;   
     }
    
-    
+    /**
+     * calcula el coseno a traves de la serie de Mauclaurin
+     * @param numero
+     * @return 
+     */
     public double calcularCoseno(double numero){
         double c = numero * Math.PI/180.0;
         double coseno = Math.cos(c);
